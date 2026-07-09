@@ -1,3 +1,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html.dark {
+  color-scheme: dark;
+}
+
+body {
+  @apply min-h-screen bg-gray-50 text-gray-900 antialiased transition-colors duration-300 dark:bg-slate-950 dark:text-slate-100;
+}
+
+* {
+  @apply box-border;
+}
+
+::selection {
+  @apply bg-indigo-500/30 text-indigo-900 dark:text-indigo-100;
+}

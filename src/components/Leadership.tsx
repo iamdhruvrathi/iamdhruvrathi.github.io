@@ -8,7 +8,10 @@ import {
 
 export default function Leadership(): JSX.Element {
   return (
-    <section id="leadership" className="py-20 px-6 bg-white">
+    <section
+      id="leadership"
+      className="py-20 px-4 bg-white dark:bg-slate-900 sm:px-6"
+    >
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -17,7 +20,7 @@ export default function Leadership(): JSX.Element {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 dark:text-slate-100">
             Leadership Experience
           </h2>
           <div className="w-20 h-1 bg-indigo-600 mx-auto"></div>
@@ -31,7 +34,7 @@ export default function Leadership(): JSX.Element {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="rounded-3xl border border-gray-200 bg-gray-50 p-8 shadow-sm"
+              className="rounded-3xl border border-gray-200 bg-gray-50 p-8 shadow-sm dark:border-slate-800 dark:bg-slate-800/80"
             >
               <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8">
                 <div>
@@ -40,14 +43,16 @@ export default function Leadership(): JSX.Element {
                       <Briefcase className="text-indigo-600" size={24} />
                     </div>
                     <div>
-                      <h3 className="text-2xl font-bold text-gray-900">
+                      <h3 className="text-2xl font-bold text-gray-900 dark:text-slate-100">
                         {entry.organization}
                       </h3>
-                      <p className="text-gray-600">{entry.duration}</p>
+                      <p className="text-gray-600 dark:text-slate-300">
+                        {entry.duration}
+                      </p>
                     </div>
                   </div>
                 </div>
-                <span className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm">
+                <span className="inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm dark:bg-slate-900 dark:text-slate-200">
                   <CalendarDays size={18} />
                   Active Roles
                 </span>
@@ -57,14 +62,16 @@ export default function Leadership(): JSX.Element {
                 {entry.roles.map((item: LeadershipRole, idx: number) => (
                   <div
                     key={idx}
-                    className="rounded-3xl bg-white p-6 shadow-sm border border-gray-200"
+                    className="rounded-3xl border border-gray-200 bg-white p-6 shadow-sm dark:border-slate-700 dark:bg-slate-900"
                   >
                     <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-3">
                       <div>
-                        <h4 className="text-lg font-semibold text-gray-900">
+                        <h4 className="text-lg font-semibold text-gray-900 dark:text-slate-100">
                           {item.title}
                         </h4>
-                        <p className="text-sm text-gray-500">{item.period}</p>
+                        <p className="text-sm text-gray-500 dark:text-slate-400">
+                          {item.period}
+                        </p>
                       </div>
                       <span className="inline-flex items-center rounded-full bg-indigo-50 px-3 py-1 text-sm font-medium text-indigo-700">
                         {item.subtitle}

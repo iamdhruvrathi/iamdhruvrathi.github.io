@@ -3,39 +3,39 @@ import { Github, Linkedin, Download, Mail, Phone } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="min-h-screen flex items-center justify-center px-6 pt-20">
-      <div className="max-w-5xl mx-auto text-center">
+    <section className="flex min-h-screen items-center justify-center px-4 pt-24 sm:px-6">
+      <div className="mx-auto max-w-5xl text-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className="text-6xl md:text-7xl font-bold text-gray-900 mb-6">
+          <h1 className="mb-6 text-5xl font-bold text-gray-900 dark:text-slate-100 sm:text-6xl md:text-7xl">
             Dhruv Rathi
           </h1>
 
-          <h2 className="text-2xl md:text-3xl text-gray-600 mb-4">
+          <h2 className="mb-4 text-2xl text-gray-600 dark:text-slate-300 sm:text-3xl">
             Think. Build. Scale.
           </h2>
 
-          <div className="flex items-center justify-center gap-6 text-gray-600 mb-8">
+          <div className="mb-8 flex flex-col items-center justify-center gap-3 text-gray-600 dark:text-slate-300 sm:flex-row sm:gap-6">
             <a
               href="mailto:dhruv2005rathi@gmail.com"
-              className="flex items-center gap-2 hover:text-indigo-600 transition"
+              className="flex items-center gap-2 transition hover:text-indigo-600"
             >
               <Mail size={18} />
               dhruv2005rathi@gmail.com
             </a>
             <a
               href="tel:+918310337114"
-              className="flex items-center gap-2 hover:text-indigo-600 transition"
+              className="flex items-center gap-2 transition hover:text-indigo-600"
             >
               <Phone size={18} />
               +91 83103 37114
             </a>
           </div>
 
-          <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto mb-12 leading-relaxed">
+          <p className="mx-auto mb-12 max-w-3xl text-lg leading-relaxed text-gray-700 dark:text-slate-300 md:text-xl">
             3rd year B.Tech Computer Science student with hands-on experience in
             Data Science, Machine Learning, and full-stack web development
             (MERN). Skilled in building end-to-end ML pipelines, RAG-based AI
@@ -55,7 +55,7 @@ export default function Hero() {
               href="https://github.com/iamdhruvrathi"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-6 py-3 bg-gray-900 text-white rounded-full hover:bg-gray-800 transition"
+              className="flex items-center gap-2 rounded-full bg-gray-900 px-6 py-3 text-white transition hover:bg-gray-800"
             >
               <Github size={20} />
               GitHub
@@ -67,7 +67,7 @@ export default function Hero() {
               href="https://www.linkedin.com/in/dhruv-rathi-399378282/"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-6 py-3 bg-indigo-600 text-white rounded-full hover:bg-indigo-700 transition"
+              className="flex items-center gap-2 rounded-full bg-indigo-600 px-6 py-3 text-white transition hover:bg-indigo-700"
             >
               <Linkedin size={20} />
               LinkedIn
@@ -77,7 +77,7 @@ export default function Hero() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               href="#"
-              className="flex items-center gap-2 px-6 py-3 border-2 border-gray-900 text-gray-900 rounded-full hover:bg-gray-900 hover:text-white transition"
+              className="flex items-center gap-2 rounded-full border-2 border-gray-900 px-6 py-3 text-gray-900 transition hover:bg-gray-900 hover:text-white dark:border-slate-100 dark:text-slate-100 dark:hover:bg-slate-100 dark:hover:text-slate-900"
             >
               <Download size={20} />
               Resume
@@ -93,7 +93,7 @@ export default function Hero() {
         >
           <div className="inline-block animate-bounce">
             <svg
-              className="w-6 h-6 text-gray-400"
+              className="h-6 w-6 text-gray-400"
               fill="none"
               strokeLinecap="round"
               strokeLinejoin="round"

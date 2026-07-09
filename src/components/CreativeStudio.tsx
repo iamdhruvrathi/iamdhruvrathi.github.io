@@ -1,9 +1,9 @@
-import { motion } from 'framer-motion';
-import { Palette, Video } from 'lucide-react';
+import { motion } from "framer-motion";
+import { Palette, Video } from "lucide-react";
 
 export default function CreativeStudio() {
   return (
-    <section className="py-20 px-6 bg-[#F9FAFB]">
+    <section className="py-20 px-4 bg-[#F9FAFB] dark:bg-slate-950 sm:px-6">
       <div className="max-w-5xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -12,7 +12,7 @@ export default function CreativeStudio() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 dark:text-slate-100">
             Creative Studio
           </h2>
           <div className="w-20 h-1 bg-indigo-600 mx-auto"></div>
@@ -31,7 +31,9 @@ export default function CreativeStudio() {
               <div className="p-3 bg-pink-100 rounded-lg">
                 <Palette className="text-pink-600" size={28} />
               </div>
-              <h3 className="text-2xl font-bold text-gray-900">Graphic Design</h3>
+              <h3 className="text-2xl font-bold text-gray-900 dark:text-slate-100">
+                Graphic Design
+              </h3>
             </div>
 
             <p className="text-gray-600 mb-4">
@@ -70,7 +72,9 @@ export default function CreativeStudio() {
               <div className="p-3 bg-orange-100 rounded-lg">
                 <Video className="text-orange-600" size={28} />
               </div>
-              <h3 className="text-2xl font-bold text-gray-900">Video Editing</h3>
+              <h3 className="text-2xl font-bold text-gray-900 dark:text-slate-100">
+                Video Editing
+              </h3>
             </div>
 
             <p className="text-gray-600 mb-4">

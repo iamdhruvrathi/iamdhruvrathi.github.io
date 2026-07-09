@@ -1,9 +1,9 @@
-import { motion } from 'framer-motion';
-import { Github, Linkedin, Mail, Heart } from 'lucide-react';
+import { motion } from "framer-motion";
+import { Github, Linkedin, Mail, Heart } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-white py-12 px-6">
+    <footer className="bg-gray-900 px-4 py-12 text-white sm:px-6">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -14,7 +14,8 @@ export default function Footer() {
         >
           <h3 className="text-3xl font-bold mb-4">Let's Connect</h3>
           <p className="text-gray-400 mb-8 max-w-md mx-auto">
-            I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
+            I'm always open to discussing new projects, creative ideas, or
+            opportunities to be part of your vision.
           </p>
 
           <div className="flex items-center justify-center gap-6 mb-8">
@@ -52,7 +53,9 @@ export default function Footer() {
 
           <div className="border-t border-gray-800 pt-8">
             <p className="text-gray-400 flex items-center justify-center gap-2">
-              Made with <Heart className="text-red-500" size={18} fill="currentColor" /> by Dhruv Rathi
+              Made with{" "}
+              <Heart className="text-red-500" size={18} fill="currentColor" />{" "}
+              by Dhruv Rathi
             </p>
             <p className="text-gray-500 text-sm mt-2">
               © {new Date().getFullYear()} All rights reserved.

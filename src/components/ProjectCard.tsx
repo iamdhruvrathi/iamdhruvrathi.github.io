@@ -28,16 +28,20 @@ export default function ProjectCard({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       whileHover={{ y: -6 }}
-      className={`bg-white rounded-2xl shadow-sm border-l-4 ${accent} p-6 transition h-full flex flex-col`}
+      className={`rounded-2xl border-l-4 bg-white shadow-sm p-6 transition h-full flex flex-col dark:bg-slate-900 ${accent}`}
     >
-      <h3 className="text-xl font-semibold text-gray-900 mb-3">{title}</h3>
-      <p className="text-gray-600 mb-4 flex-1">{description}</p>
+      <h3 className="text-xl font-semibold text-gray-900 mb-3 dark:text-slate-100">
+        {title}
+      </h3>
+      <p className="mb-4 flex-1 text-gray-600 dark:text-slate-300">
+        {description}
+      </p>
 
       <div className="flex flex-wrap gap-2 mb-4">
         {tech.map((t: string, i: number) => (
           <span
             key={i}
-            className={`text-xs ${accentBg} px-3 py-1 rounded-full text-gray-700`}
+            className={`text-xs ${accentBg} px-3 py-1 rounded-full text-gray-700 dark:text-slate-200`}
           >
             {t}
           </span>
